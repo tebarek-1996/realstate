@@ -1,0 +1,45 @@
+
+
+@mixin container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @each $breakpoint , $width in $container-widths {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            max-width: $width;
+        }
+    }
+}
+
+.container {
+    @include container;
+}
+
+@mixin media-up($breakpoint) {
+  @media (min-width: map-get($breakpoints , $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin flexbox($justify-content: center , $align-items: center , $flex-direction: row) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+
+@mixin bg-img($bg-img) {
+
+
+  background-image: $bg-img;
+    background-color: $secondaryColor;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}

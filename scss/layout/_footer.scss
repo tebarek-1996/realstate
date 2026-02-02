@@ -1,0 +1,138 @@
+.footer {
+    background-color: $tertiaryColor;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include media-up(md) {
+        padding-right: 10px;
+
+
+    }
+
+    .inner-footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 80px;
+
+        .footer-boxs {
+            margin-top: -38px;
+
+            .logo {
+                width: 100px;
+            }
+
+            h3 {
+                background: text linear-gradient(234deg, #AF7838, #EFD878, #AF7838);
+                color: transparent;
+            }
+
+            p {
+                color: $textLight;
+                font-size: 15px;
+                width: 85%;
+                margin-top: 15px;
+            }
+
+
+        }
+
+        .footer-box {
+            h3 {
+                background: text linear-gradient(234deg, #AF7838, #EFD878, #AF7838);
+                color: transparent;
+                margin-bottom: 8px;
+                color: $secondaryColor;
+            }
+
+
+
+
+            a {
+                background: linear-gradient(234deg, #AF7838, #EFD878, #AF7838);
+                -webkit-background-clip: text;
+                color: transparent;
+                position: relative;
+                font-size: 18px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -8px;
+                    right: 0;
+                    background-color: $primaryColor;
+                    box-shadow: 0 0 5px $primaryColor, 0 0 10px $primaryColor;
+                    transition: 0.4s ease-in-out;
+                }
+
+                &:hover {
+                    color: $primaryColor;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+
+            li {
+                margin-bottom: 15px;
+
+
+
+            }
+
+
+
+
+
+        }
+
+
+        .footer-boxss {
+            h3 {
+                background: text linear-gradient(234deg, #AF7838, #EFD878, #AF7838);
+                color: transparent;
+                margin-bottom: 20px;
+
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    height: 40px;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    font-family: cairo;
+                }
+
+            }
+
+            .icons {
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+
+                i {
+                    font-size: 25px;
+                    transition: 0.3s;
+                    color: $textLight;
+
+                    &:hover {
+                        scale: 1.1;
+                        filter: drop-shadow(0 0 8px $primaryColor);
+
+                    }
+                }
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,105 @@
+header {
+    background-color: $tertiaryColor;
+    height: 60px;
+    @include flexbox();
+    border-bottom: 2px solid $primaryColor;
+  
+
+
+
+
+    nav {
+        @include flexbox(space-between, center, row);
+        @include container;
+
+        ul {
+            list-style: none;
+            display: none;
+
+            @include media-up(md) {
+                @include flexbox();
+                gap: 20px;
+
+            }
+
+
+
+            li {
+                a {
+                    text-decoration: none;
+                    font-weight: 600;
+                                  background: text linear-gradient(234deg, #AF7838, #EFD878, #AF7838) ;
+              color: transparent ;
+                    font-size: large;
+            
+                     
+            
+
+                    &:hover {
+                        color: $primaryColor;
+                        
+                        
+                    
+                        
+             
+                    }
+
+                }
+            }
+
+        }
+
+        .icons {
+            display: none;
+
+            @include media-up(md) {
+                display: flex;
+              
+
+            }
+
+            gap: 15px;
+       
+
+            a {
+                
+                font-size: larger;
+                 transition: 0.3s;
+                 color: $textLight;
+                
+
+                &:hover {
+                    
+           
+              transform: scale(1.1);
+
+filter: drop-shadow(0 0 8px $primaryColor);
+
+
+              
+                 
+                      
+                  
+                }
+            }
+
+            i {
+
+                font-size: 22px;
+            }
+        }
+
+        .mobile-nav-icon {
+            color: $primaryColor;
+            display: flex;
+            cursor: pointer;
+            font-size: 20px;
+
+            @include media-up(md) {
+                display: none;
+            }
+        }
+    }
+
+
+}
